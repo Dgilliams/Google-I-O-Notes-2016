@@ -1,0 +1,116 @@
+## Awareness API
+### Bhavik Singh and Maurice Chu
+- Aware experiences help your users
+  - streamline critical tasks, building retention
+  - Suggest important actions, increasing CTR
+  - Discover moments of delight, driving new users
+- Android Awareness and Location APIs bridge the physical world of users and the digital world of Android to help build better applications
+
+### Buckets
+- Where you are
+  1. fused location provider
+  - Geofencing
+  - Places API
+    - Google Maps uses Plfaces and FLP (FusedLocationProvider) to help you navigate around the world
+- What you're doing
+  4. Activity recognition
+    - Google Fit uses activity recognition to help you get in shape
+  5. Fit platform
+  - Sensor API
+- Whats around you
+  1. Nearby Messages
+  - Nearby Comments
+  - Nearby Notifications
+    - Chromecast uses Nearby APIs to help you share your cast device with guests
+
+## Maurice Talks
+- There are 9 APIs (9 above)
+
+### System health
+Example: Driving a car on the road past the pharmacy you need to pick drugs up from
+- Option A:
+  - Turn on GPS API first, then the activity recognition
+- B: Turn on activity recognition then GPS
+- C: both at the same time
+
+### Issues Today
+- Multiple API for different signals
+- No Combinations yet, must code links on your own
+- Battery drain and sluggishness
+
+## SOLUTION: AWARENESS API
+- A unified sensing platform, enabling apps to be aware of all aspects of a users context while managing system health for you
+
+7 Context types:
+1. Location
+- Place
+- Beacons
+- Time
+- Activity
+- Headphones
+- Weather
+
+### Fence API
+- Callback style
+- Same example as above
+
+#### Use
+AwarenessFence startDriving = DetectedActivityFence.starting(
+DetectedActivityFence.IN_VEHICLE
+)
+
+areaAroundStore = LocationFence.in( STORE_LATITUDE, STORE_LONG, 1000, 0L);
+)
+
+##### Also needed
+
+- .during(...)
+- .inDailyInterval(...)
+- .and(...)
+- FenceUpdateRequest fenceUpdateRequest =  new FenceUpdateRequest,Builder().
+- .addFence(...).addFence(...).build();
+
+- Awareness.FenceApi.updateFences(...);
+
+##### Write the callback
+void onReceive(...){
+  FenceState = FenceState.extract(...)
+}
+
+### Snapshot API
+- Polling Style
+
+#### Use
+PlacesResult pr = Awareness.SnapshotApi.getPlaces(...).await();
+
+### Easy Permission Management
+- Location, place, beacon, weather
+  - requires ACCESS_FINE_LOCATION
+- other
+  - other
+- other
+
+### Other
+- Tailored Notifications, not overload
+- Be conscious of battery
+
+## Bhavik: What have Partners been up to?
+- Trulia- Real estate for open houses
+  - notifies when near an open house
+- Aviary - photo editing
+- Superplayer Music
+  - bots that notify you context aware music
+- RunKeeper
+- Zillow
+- GrubHub
+- Kekanto
+- TomTom
+- Zedge
+- Pixart
+- Nova Launcher
+  - MIGHT REWRITE
+- iHeart radio
+
+
+- **developers.google.com/awareness**
+- **g.co/awarenessIO**

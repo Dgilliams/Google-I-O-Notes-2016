@@ -1,0 +1,134 @@
+# Nearby: Proximity within and without apps
+## Wednesday May 18, 2016
+Speakers
+- Andrew Bunner
+- Akshay Kannan @iamtheak
+
+## Today's talk
+- Discovery And Communication
+- Scanning for BLE Beacons
+- Something New!
+
+## Currently
+- Chromecast Guest mode
+- Nearby.Messages Public API
+  - Play services 2.3+
+- Examples
+  - Pocket Casts
+    - Go to nearby tab, and post podcasts nearby
+  - Trello
+    - nearby can be used to start collaborations with people around you
+    - simply passes the url over nearby
+
+
+## Technical Details
+- How it works
+  - Publish and subscribe
+  - BLE and ultra sound
+    - BLE
+      - 2.4 ghz radio
+      - goes through walls
+      - up to 100 feet
+    - Ultrasound
+      - 18.5 - 20 KHz audio
+      - doesn't go through walls
+      - around 5 feet
+      - they use Speedyspectrum for analyzing sound waves
+
+
+- Code
+  - Nearby.Messages.publish(...)
+    - less than 100kb
+  - Nearby.Messages.subscribe(...)
+  - strategy.setDistanceType(DISTANCE_TYPE_EARSHOT)
+    - use for when you only want devices in the room
+
+## Peer to Peer Permission
+  - no manifest change
+  - app will still auto update
+  - transparent explanation
+  - have the user do something explicit to turn on P-P so they realize what they're doing
+  - there is an active notification while in use
+
+## Beacons
+- they emit identifiers (32 byte strings)
+1. Scanning permission
+  - only requires location
+  - no more BLUETOOTH_ADMIN
+    - breaks automatic updates!
+  - continued auto-updates
+  - works back to jelly bean
+2. More free scans
+  - every screen-on event
+  - piggyback on other apps
+  - piggyback on Location History
+  - all nearby apps benefit from this search
+3. Wakes your app
+  - Nearby re-launches your app EVEN if it's been killed
+
+## Nearby for Beacons
+- Location permission only
+- more free scans
+- wakes your app up
+- more coming
+- will be on github
+- **developers.google.com/nearby**
+
+## Something New!
+- Nearby Notifications
+  - works on Jellybean+
+
+## What can I tie to my beacon?
+  - HTTPS Web URL
+  - App intent with URL fallback
+  - direct app install
+
+## App install Criteria
+ these are early thoughts, may change
+ 1. Proximity-relevant
+ - Action orientated
+ - broad appeal
+ - jump right in
+
+## Partners
+ - United reminds you to download their video app so you don't have disappointed children that can't watch the in flight movie
+ - CVS
+ - The Broad
+   - modern art museum in LA uses a beacon to tell you...
+   # //TODO use beacon for what?
+ - University of Notre Dame
+   - this is a counter example
+   - virtual tour with beacons around the campus
+ - #Mobile Passport
+
+ ## No programming Required
+ - work is on the beacon side
+
+ ### Start
+1. Get Beacons (g.co/beacons)
+- can also use phone as a beacon
+2. Configure Beacons
+  - install beacon maker app
+ - choose either:
+   - Eddystone URL (web)
+   - Eddystone UID (web or app)
+3. Register Beacons
+4. Tie to web or app
+
+## Beacon Attachment
+{
+"title":"fun partk",
+"description":"ddd"
+"url
+}
+
+examples of code titled...
+- App install
+- App with web fallback
+- simply the web
+
+developers.google.com/nearby
+
+- you can set it up as debug so you can start now
+- TO BE WHITELISTED
+  -  go to the link

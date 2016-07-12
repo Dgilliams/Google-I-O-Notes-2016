@@ -1,0 +1,95 @@
+# What's new in Wear 2.0?
+Speakers
+- Brett Lider @BL
+- Dan Koulomzin @dkoulomzin
+
+# What we've learned
+- Tethered to the phone
+- Now it'll be untethered (Standalone)
+- Android wear is about personal expression and utility
+- Quick replies and conversations
+- Activity tracking and insight
+
+# New User Interface
+- Complications are the name of the new UI widgets
+- Ranger watchface
+- Add more favorites
+- new watch face drawer
+- swipe up to delete faces from favorites
+- from anywhere in wear, you press the hardware button = back
+
+Quick Settings
+- drag down from top of the watch
+- new brightness controls to see the live changes
+- New app launcher
+  - circular reveal from where the button clicks
+  - more icons
+  - so much better
+- new keyboard
+- new messages API
+- scroll bar on the side to show location in list
+-
+
+## Material design for Apps
+- Vertical Layout
+- wearable action drawer on bottom
+  - shows primary action but can grab up for more
+- wearable navigation drawer can peek in from the top
+  - pull down from top and change views just like normal settings
+- all apps should use a dark color palette
+  - wayy less power
+  - Social appropriateness, not showing too much light to other people
+- Only tell them your primary color and theyll do the rest
+
+- Dont forget Wear apps are more powerful than other apps since theyre always on.
+  - great for todo lists
+
+## Standalone Apps
+### Cloud and Data
+- bypass your phone app and talk directly to the cloud
+- no phone needed!
+- removing the phone from the picture...
+- Don't grab data you're not going to use
+ - images way larger than the screen
+- Doze and Doze light are coming to Wear 2.0
+ - great for battery
+- Standalone apps must manage authorization
+- Notify users directly from your wearable app
+  - communicate from the cloud to the watch/phone using FCM/GCM
+  - communicate from the phone to the watch using notification bridge
+- Apps are downloaded from the play store, now watches can access the play store and download and install WITHOUT A PHONE
+
+
+## Watch Faces
+- Complications
+  - comes from original watchmaking referring to the dials on the watch
+- Complications API!
+- Data providers
+
+## UI Options
+- Short Text - has icon and small text
+- Icon - only has an icon
+- Ranged value - has a number and visual
+- Long text
+- Large Image
+
+## Messaging
+- Messages in the stream
+- Expanded notifications for an app-like experience
+- Partner on watchface
+- conversations, not just notifications
+- inline actions
+- inline reply
+- content intent to launch apps
+- expanded notifications as app like experience
+- launch apps faster
+
+## Fitness
+- Real time data update notifications
+- Real time gym activity recognition
+- Real time walking running and bicycling recognition
+
+## Real time Data update notifications
+- Nutrition, hydration, weight, BMR...
+
+#g.co/wearpreview

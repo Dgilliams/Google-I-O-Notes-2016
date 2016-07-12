@@ -1,0 +1,51 @@
+# Introducing Project Tango Area Learning
+## Wednesday May 18, 2016
+- Wim Meeussen @wmeeusse Leads the Project Tango Location Team
+- Goals Today
+  - Lets make virtual objects in the real world!
+  - Lets build tango multiplayer experiences!
+  - The Future: Imagine never getting lost again!
+
+## 3 Tango Areas
+- Motion Tracking
+  - Know where you are in the world
+- Depth Perception
+  - 3D camera on the phone to sense the world around it
+  - query this info with 3D point clouds
+- Area Learning
+  - gives your tango device a memory
+
+## How Area Learning Works!
+- Tango recognizes landmarks in the world, tracks where they are when you move and maps the space
+
+### Use Case for Area Learning
+- never getting lost again, better room mapping
+
+### Area Learning in the Real World
+Where does it work (or sometimes not work)?
+- Doesn't work always
+  - messy closet vs clean closet
+    - obviously the same closet with the same contents but different landmark layout
+  - lighting day/night
+    - same landmarks but not some found because not seen, or some found that weren't visible earlier
+  - Large crowds can hide an area because they're blocking the landmarks
+  - boring rooms with no landmarks
+    - it's hard to map a room with nothing in it
+  - seasons change landscapes
+- So how do we deal with these?
+  - Time, keep track of the area over time. Learns more over time
+- Works well in controlled environments like your living room
+
+### How to build an Area Learning Application!!!
+- AR with drift correction
+- Friday morning - How to build an AR end to end using Tango
+- This example is how to port your existing AR to use Area Learning
+- only two lines of code
+  - //Configure drift free motion tracking
+    ..  code code code
+  // Query Drift Free motion tracking
+    ... code ...
+
+#### Way too much code to type :(
+
+# Lenovo is teaming up with Tango to release a device later this year
